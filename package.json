@@ -1,22 +1,24 @@
 {
   "name": "hackaton-ironhack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev": "DEBUG=hackaton-ironhack:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StefanieCespedes/hackaton-ironhack.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/StefanieCespedes/hackaton-ironhack/issues"
-  },
-  "homepage": "https://github.com/StefanieCespedes/hackaton-ironhack#readme",
   "dependencies": {
-    "iron-generator": "^4.14.4"
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.10",
+    "morgan": "^1.9.0",
+    "node-sass-middleware": "^0.11.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
