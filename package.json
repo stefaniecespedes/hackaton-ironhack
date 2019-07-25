@@ -1,0 +1,22 @@
+{
+  "name": "hackaton-ironhack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanieCespedes/hackaton-ironhack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefanieCespedes/hackaton-ironhack/issues"
+  },
+  "homepage": "https://github.com/StefanieCespedes/hackaton-ironhack#readme",
+  "dependencies": {
+    "iron-generator": "^4.14.4"
+  }
+}
