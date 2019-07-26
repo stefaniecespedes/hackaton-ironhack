@@ -5,7 +5,6 @@ const dbtitle = 'project-hackaton';
 mongoose.connect(`mongodb://localhost/${dbtitle}`);
 Stores.collection.drop();
 
-
 const stores = [
   {
     storeName: 'SuperFood',
