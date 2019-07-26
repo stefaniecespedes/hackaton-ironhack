@@ -24,6 +24,9 @@ let transport = nodemailer.createTransport({
 
 /* GET home page and send store info */
 router.get('/', (req, res) => {
+
+  res.render('index', { GMAPS: process.env.GMAPS });
+
   Stores.find()
     .then((store) => {
       res.render('index', { store, GMAPS: process.env.GMAPS });
@@ -33,6 +36,7 @@ router.get('/', (req, res) => {
       throw new Error(err)
     });
   
+
 });
 
 // Get info from store db

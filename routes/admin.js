@@ -9,11 +9,7 @@ const passport = require('passport');
 const User = require('../models/User');
 
 router.get('/login', (req, res, next) => {
-  res.render('./admin/login');
-});
-
-router.get('/dashboard', (req, res, next) => {
-  res.render('./admin/dashboard');
+  res.render('./admin/login', { message: req.flash('error') });
 });
 
 router.post('/login', passport.authenticate('local', {
@@ -22,6 +18,10 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: true,
   passReqToCallback: true,
 }));
+
+router.get('/dashboard', (req, res, next) => {
+  res.render('./admin/dashboard');
+});
 
 router.get('/logout', (req, res) => {
   req.logout();
