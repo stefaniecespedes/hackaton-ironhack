@@ -4,29 +4,18 @@ const Stores = require('../models/stores');
 const User = require('../models/User');
 const nodemailer = require('nodemailer');
 
-// let transport = nodemailer.createTransport({
-//   host: "smtp.sparkpostmail.com",
-//   port: 587,
-//   auth: {
-//     user: "SMTP_Injection",
-//     pass: "452d52801b88584c40c03c698255951ff9e061c0"
-//   }
-// });
-
 let transport = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
+  host: "smtp.sparkpostmail.com",
+  port: 587,
   auth: {
-    user: "92121f81fcb375",
-    pass: "2444fd8df5ec83"
+    user: "SMTP_Injection",
+    pass: "452d52801b88584c40c03c698255951ff9e061c0"
   }
 });
 
 /* GET home page and send store info */
 router.get('/', (req, res) => {
-
   res.render('index', { GMAPS: process.env.GMAPS });
-
   Stores.find()
     .then((store) => {
       res.render('index', { store, GMAPS: process.env.GMAPS });
@@ -35,8 +24,6 @@ router.get('/', (req, res) => {
     .catch((err) => {
       throw new Error(err)
     });
-  
-
 });
 
 // Get info from store db
@@ -74,8 +61,7 @@ router.post('/getCoupon', (req, res) => {
     newUser.save()
       .then(() => {
         transport.sendMail({
-          // nomedoprojeto@ironhackers.dev
-          from: '"Your coupon is here!" <37a6f5540d-35e0ea@inbox.mailtrap.io>',
+          from: '"Your coupon is here!" <avox-superfood@ironhackers.dev>',
           to: email, 
           subject: 'Get your coupon', 
           text: `Here is your coupon!
