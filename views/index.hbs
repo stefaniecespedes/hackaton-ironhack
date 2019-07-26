@@ -47,7 +47,7 @@
     <style>
         #map {
             height: 50vh;
-            width: 80%;
+            width: 100%;
         }
     </style>
 
@@ -86,29 +86,6 @@ At Avox we make sure our entire supply chain is sustainable, affordable and corr
   </div>
 </section>
 
-<section class="map-sec">
-   <div class="container pt-5">
-    <h3 class="text-uppercase d-flex justify-content-center"> Find us</h3>
-    <div class="row pt-5 pb-5">
-  <div id="map" class="col-lg-8">
-  </div>
-
-  <div class="col-lg-4">
-    <ul class="nav nav-pills nav-stacked scroll-store">
-        {{#each store}}
-          <li class="nav-item">
-            <h4>{{storeName}}</h4>
-            <p>{{address}}, {{number}}</p>
-            <p>{{neighborhood}}</p>
-            <p>{{city}}</p>
-            <hr class="my-4 event-break">
-            </p>        
-          </li>
-        {{/each}}
-      </ul>
-  </div>
-  </div>
-</section>
 
 <div class="feedback">
   <div>
@@ -146,6 +123,27 @@ At Avox we make sure our entire supply chain is sustainable, affordable and corr
 <div class="footer">
   <img src="../images/footer.jpeg" alt="">
 </div>
+
+  <div id="map" >
+  </div>
+{{!-- 
+  <div class="col-lg-4">
+    <ul class="nav nav-pills nav-stacked scroll-store">
+        {{#each store}}
+          <li class="nav-item">
+            <h4>{{storeName}}</h4>
+            <p>{{address}}, {{number}}</p>
+            <p>{{neighborhood}}</p>
+            <p>{{city}}</p>
+            <hr class="my-4 event-break">
+            </p>        
+          </li>
+        {{/each}}
+      </ul>
+  </div> --}}
+<footer class="footer">
+
+</footer>
   
 <!--  Axios CDN  -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
