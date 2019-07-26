@@ -40,7 +40,6 @@ body {
 
 .main-text{
   padding-top: 15vh;
-  color: white;
 }
 .main-text h1{
   font-size: 3em
@@ -142,12 +141,14 @@ figure {
   max-width: 400px;
 }
 
-/*# sourceMappingURL=style.css.map */
-  width: 30vh;
-}
 
 .map-sec{
   background-color: rgba(228, 227, 227, 0.795);
+}
+
+.footer{
+  height: 5vh;
+  background-color: black;
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   .header-main{
