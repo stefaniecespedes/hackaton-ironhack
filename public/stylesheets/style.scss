@@ -1,12 +1,74 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+//navbar
+
+.navbar{
+  background-color: #4E9B46;
+  border-bottom: 0px;
+}
+.link-custom{
+  color: #F4F4F4 !important;
+  font-size: 1.3em;
 }
 
+.link-custom:hover{
+  color: black !important;
+}
+
+.custom-item{
+  background-color: green;
+}
+
+.custom-toggler{
+  border: 0px;
+}
+
+//main section - header
+.header-main{
+  background-image: url(/images/3avos-leaves.png), url(/images/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: 90vh 80vh, 100% 90%;
+  background-position: 900px absolute, top center;
+  height:95vh;
+}
+.back-img{
+z-index: 1;
+}
+.main-text{
+  padding-top: 15vh;
+}
+.main-text h1{
+  font-size: 3em
+}
+.main-text p{
+  font-size: 1.5em;
+}
+
+.btn-custom{
+  background-color: #F2C94E;
+  color: black;
+  border: 0px;
+  border-radius: 5px;
+  padding: 2%;
+  width: 30vh;
+}
+
+.btn-custom:hover{
+  background-color: #EAA03C;
+  color: black;
+  border: 0px;
+}
+
+//benefits
+.image-list{
+  width: 180px;
+}
+// scroll map
 .scroll-store {
   height:40vh;
   overflow-y: scroll;

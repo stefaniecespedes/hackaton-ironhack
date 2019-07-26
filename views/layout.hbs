@@ -6,10 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
   <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
+
+{{!-- Navbar --}}
+  <nav class="navbar navbar-expand-lg  navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">SuperFood</a>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center circle-behind" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link link-custom text-uppercase pr-5" href="#main">Benefits</a>
+        <a class="nav-item nav-link link-custom text-uppercase pr-5" href="#features">Information</a>
+        <a class="nav-item nav-link link-custom text-uppercase pr-5" href="#about">Find Me!</a>
+      </div>
+    </div>
+  </nav>
+
 
   {{{body}}}
 
