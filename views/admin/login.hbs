@@ -1,0 +1,10 @@
+<form action="/login" method="POST">
+  <label for="email">Email</label>
+  <input type="email" name="username">
+  <label for="password">Password</label>
+  <input type="text" name="password">
+  <a href="/login"><button type="submit"> Login</button></a>
+  {{#if message}}
+    <p>{{message}}</p>
+  {{/if}}
+</form>
