@@ -3,14 +3,14 @@ const router  = express.Router();
 const User = require('../models/User');
 const nodemailer = require('nodemailer');
 
-// let transport = nodemailer.createTransport({
-//   host: "smtp.sparkpostmail.com",
-//   port: 587,
-//   auth: {
-//     user: "",
-//     pass: "452d52801b88584c40c03c698255951ff9e061c0"
-//   }
-// });
+let transport = nodemailer.createTransport({
+  host: "smtp.sparkpostmail.com",
+  port: 587,
+  auth: {
+    user: "SMTP_Injection",
+    pass: "452d52801b88584c40c03c698255951ff9e061c0"
+  }
+});
 
 let transport = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
@@ -53,6 +53,7 @@ router.post('/getCoupon', (req, res) => {
     newUser.save()
       .then(() => {
         transport.sendMail({
+          // nomedoprojeto@ironhackers.dev
           from: '"Your coupon is here!" <37a6f5540d-35e0ea@inbox.mailtrap.io>',
           to: email, 
           subject: 'Get your coupon', 
