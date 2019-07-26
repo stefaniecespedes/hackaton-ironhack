@@ -1,8 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap");
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
+
+body {
+  font-size: 100%;
+  color: black;
+  font-family: 'Montserrat', sans-serif; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%; }
+
+header {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  z-index: 999;
+  background: rgba(50, 50, 50, 0.95);
+  box-shadow: 0 10px 20px rgba(50, 50, 50, 0.95); }
+
+nav {
+  margin-top: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: flex-end; }
+
+nav a {
+  font: 1.2em/1em sans-serif;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black; }
+
+nav a:hover {
+  text-decoration: none;
+  color: green; }
 
 /*# sourceMappingURL=style.css.map */
