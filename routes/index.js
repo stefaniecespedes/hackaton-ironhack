@@ -24,7 +24,7 @@ let transport = nodemailer.createTransport({
 
 /* GET home page */
 router.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { GMAPS: process.env.GMAPS });
 });
 
 router.get('/api', (req, res, next) => {
