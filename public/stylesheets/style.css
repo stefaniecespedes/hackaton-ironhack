@@ -3,6 +3,7 @@ body {
   margin: 0px;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 
 /* //navbar */
@@ -33,14 +34,13 @@ body {
   background-image: url(/images/3avos-leaves.png), url(/images/Background.jpg);
   background-repeat: no-repeat;
   background-size: 90vh 80vh, 100% 90%;
-  background-position: 900px absolute, top center;
+  background-position: top right, top center;
   height:95vh;
 }
-.back-img{
-z-index: 1;
-}
+
 .main-text{
   padding-top: 15vh;
+  color: white;
 }
 .main-text h1{
   font-size: 3em
@@ -50,7 +50,7 @@ z-index: 1;
 }
 
 .btn-custom{
-  background-color: #F2C94E;
+  background-color: #F4F4F4;
   color: black;
   border: 0px;
   border-radius: 5px;
@@ -64,13 +64,17 @@ z-index: 1;
   border: 0px;
 }
 
-//benefits
+/* //benefits */
 .image-list{
   width: 180px;
 }
-// scroll map
+
+.align-benefits{
+  padding-top: 6%;
+}
+/* // scroll map */
 .scroll-store {
-  height:40vh;
+  height:50vh;
   overflow-y: scroll;
   width: 30vh;
 }
@@ -141,3 +145,20 @@ figure {
 /*# sourceMappingURL=style.css.map */
   width: 30vh;
 }
+
+.margin-custom{
+  margin-right: 100px;
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .header-main{
+    background-image: url(/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    background-position:top center;
+    height:95vh;
+  } 
+
+}
+
