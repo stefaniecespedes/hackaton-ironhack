@@ -1,2 +1,14 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<form action="/getCoupon" method="POST" id="form-container">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="name">
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" placeholder="email@domain.com">
+
+  {{!-- {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}} --}}
+
+  <button type="submit">Get your coupon!</button>
