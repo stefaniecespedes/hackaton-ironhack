@@ -6,7 +6,7 @@ body {
   color: black;
 }
 
-/* //navbar */
+/* navbar */
 
 .navbar{
   background-color: #3e7134 !important;
@@ -29,7 +29,7 @@ body {
   border: 0px;
 }
 
-/* //main section - header */
+/* main section - header */
 .header-main{
   background-image: url(/images/3avos-leaves.png), url(/images/Background.jpg);
   background-repeat: no-repeat;
@@ -63,15 +63,11 @@ body {
   border: 0px;
 }
 
-/* //benefits */
+/* benefits */
 .image-list{
   width: 180px;
 }
-
-.align-benefits{
-  padding-top: 6%;
-}
-/* // scroll map */
+/* scroll map */
 .scroll-store {
   height:50vh;
   overflow-y: scroll;
@@ -81,65 +77,20 @@ body {
 .scroll-store li {
   width: 30vh; }
 
-.card-login {
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 120px;
-  /* background-color: #4e9b46; */
-}
-
-.images img {
-  display: flex;
-  /* justify-content: space-between; */
-}
-
-.login-page {
-  padding: 1px;
+#dashboard-back {
   background-image: url('../images/Background.jpg');
   background-size: cover;
-  height: 100vw;
+}
+.table {
+  background-color: white;
 }
 
-.feedback {
-  display: flex;
-  justify-content: center;
-  background-color: #f1f1f1;
-  padding: 50px;
-  /* align-content: center; */
+.dashboard-title {
+  color: white;
 }
-
-.feedback h2 {
-  font-weight: bolder;
-  display: flex;
-  padding-bottom: 30px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.consumer-box {
-  font-size: 20px;
-  max-width: 33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.images {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.images p {
-  margin-right: 24px;
-}
-
-figure {
-  max-width: 400px;
-}
+<<<<<<< HEAD
+/*# sourceMappingURL=style.css.map */
+=======
 
 
 .map-sec{
@@ -161,3 +112,4 @@ figure {
 
 }
 
+>>>>>>> 8c9158f0b34518958fe6cf4c22446a7a3d007611

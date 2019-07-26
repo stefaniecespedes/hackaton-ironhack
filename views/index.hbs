@@ -1,16 +1,19 @@
 <section class="header-main">
-<div class="container">
-  <div class="row position">
-    <div class="col-lg-8 main-text">
-      <h1 class="display-4 pb-3 font-weight-bold">Hey!</h1>
-      <p class="lead pb-3">Dou you want a healthier life?</p>
-      <p>We can help you!</p>
-      <p class="pb-3">Apply for a coupon and you’ll get 20% discount on our products</p>
-      <button class="btn btn-primary btn-lg btn-custom"  data-toggle="modal" data-target="#exampleModal" role="button">COUPON</button>
-    </div>
+  {{!-- <div class="back-img col-lg-3 d-flex justify-content-start">
+    <img src='/images/3avos-leaves.png'>
+  </div> --}}
+  <div class="container">
+    <div class="row position">
+      <div class="col-lg-8 main-text">
+        <h1 class="display-4 pb-3 font-weight-bold">Cara, olha pra cá!</h1>
+        <p class="lead pb-3">Sério, me nota!</p>
+        <p class="pb-3">Aqui tem uma linha muito doida que fala com o usário</p>
+        <button class="btn btn-primary btn-lg btn-custom" data-toggle="modal" data-target="#exampleModal"
+          role="button">CUPOM</button>
+      </div>
 
+    </div>
   </div>
-</div>
 </section>
 
 {{!-- modal form for email --}}
@@ -28,14 +31,15 @@
 
           <div class="form-group">
             <label for="exampleInputPassword1">Name:</label>
-            <input type="text" name="name"class="form-control" id="exampleInputPassword1">
+            <input type="text" name="name" class="form-control" id="exampleInputPassword1">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Email:</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email"  aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+              placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div> 
+          </div>
       </div>
       <div class="modal-footer">
         <button type="Submit" class="btn btn-primary">Get your Cupom!</button>
@@ -44,48 +48,71 @@
     </div>
   </div>
 </div>
-    <style>
-        #map {
-            height: 50vh;
-            width: 100%;
-        }
-    </style>
+<style>
+  #map {
+    height: 40vh;
+  }
+</style>
 
 </section id="benefits">
-  <div class="container">
-    <h3 class="text-uppercase d-flex justify-content-center"> Benefits</h3>
-    <div class="row d-flex justify-content-center">
-      <div class="col-lg-4 align-benefits margin-custom">
-          <div class="media  d-flex align-items-center mb-5">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">Produced with love!</h5>
-              Our products come from local farmers. We want to help as many small producers as we can
-            </div>
-           <img class="image-list"src="/images/força.png" class="ml-3" alt="...">
-         </div>
-          <div class="media d-flex align-items-center mb-5">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">Gives you evergy!</h5>
-              Avocado contains  vitamins C, E, K, and B-6 and others.
-            </div>
-           <img class="image-list"src="/images/343666-PAOHSZ-860-[Recovered].png" class="ml-3" alt="...">
-         </div>
-          <div class="media d-flex align-items-center mb-5">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">Sustainable!</h5>
-At Avox we make sure our entire supply chain is sustainable, affordable and correct.            </div>
-           <img class="image-list"src="/images/é-sustentável.png" class="ml-3" alt="...">
-         </div>
+<div class="container">
+  <h3 class="text-uppercase d-flex justify-content-center"> Benefits</h3>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="media  d-flex align-items-center">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Sério, me nota</h5>
+          To bem aqui, me nota!
+        </div>
+        <img class="image-list" src="/images/força.png" class="ml-3" alt="...">
       </div>
-      <div class="col-lg-6 d-flex justify-content-end">
-        <img src="/images/abacate-lindo.png">
+      <div class="media d-flex align-items-center">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Sério, me nota</h5>
+          To bem aqui, me nota!
+        </div>
+        <img class="image-list" src="/images/343666-PAOHSZ-860-[Recovered].png" class="ml-3" alt="...">
       </div>
+      <div class="media d-flex align-items-center">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Sério, me nota</h5>
+          To bem aqui, me nota!
+        </div>
+        <img class="image-list" src="/images/é-sustentável.png" class="ml-3" alt="...">
       </div>
     </div>
-    
   </div>
+  <div class="col-lg-6">
+    <img src="/public/images/abacate-lindo.png">
+  </div>
+</div>
+
+</div>
 </section>
 
+<section class="map-sec">
+   <div class="container pt-5">
+    <h3 class="text-uppercase d-flex justify-content-center"> Find us</h3>
+    <div class="row pt-5 pb-5">
+  <div id="map" class="col-lg-8">
+  </div>
+
+  <div class="col-lg-4">
+    <ul class="nav nav-pills nav-stacked scroll-store">
+      {{#each store}}
+      <li class="nav-item">
+        <h4>{{storeName}}</h4>
+        <p>{{address}}, {{number}}</p>
+        <p>{{neighborhood}}</p>
+        <p>{{city}}</p>
+        <hr class="my-4 event-break">
+        </p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  </div>
+</section>
 
 <div class="feedback">
   <div>
@@ -120,6 +147,9 @@ At Avox we make sure our entire supply chain is sustainable, affordable and corr
 
 </div>
 
+<div class="footer">
+  <img src="../images/footer.jpeg" alt="">
+</div>
 
   <div id="map" >
   </div>
@@ -143,10 +173,9 @@ At Avox we make sure our entire supply chain is sustainable, affordable and corr
 </footer>
   
 <!--  Axios CDN  -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!--  Google Maps Key  -->
-  <script
-    <script src="https://maps.googleapis.com/maps/api/js?key={{GMAPS}}&libraries=places">  </script>
-  </script>
+<script <script src="https://maps.googleapis.com/maps/api/js?key={{GMAPS}}&libraries=places">  </script>
+</script>
 <!--  Connect main.js  -->
-  <script type="text/javascript" src="/javascripts/map.js"></script>
+<script type="text/javascript" src="/javascripts/map.js"></script>
