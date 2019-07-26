@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
 
   Stores.find()
     .then((store) => {
+      console.log(store)
       res.render('index', { store, GMAPS: process.env.GMAPS });
       console.log(store);
     })
