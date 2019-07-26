@@ -8,8 +8,8 @@ let transport = nodemailer.createTransport({
   host: "smtp.sparkpostmail.com",
   port: 587,
   auth: {
-    user: "SMTP_Injection",
-    pass: "452d52801b88584c40c03c698255951ff9e061c0"
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   }
 });
 
@@ -61,7 +61,7 @@ router.post('/getCoupon', (req, res) => {
     newUser.save()
       .then(() => {
         transport.sendMail({
-          from: '"Your coupon is here!" <avox-superfood@ironhackers.dev>',
+          from: '"Your coupon is here!" <avox@ironhackers.dev>',
           to: email, 
           subject: 'Get your coupon', 
           text: `Here is your coupon!
