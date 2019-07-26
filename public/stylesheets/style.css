@@ -5,4 +5,12 @@ body {
 a {
   color: #00B7FF; }
 
+.scroll-store {
+  height: 40vh;
+  overflow-y: scroll;
+  width: 30vh; }
+
+.scroll-store li {
+  width: 30vh; }
+
 /*# sourceMappingURL=style.css.map */

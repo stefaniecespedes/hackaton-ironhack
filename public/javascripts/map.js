@@ -1,6 +1,11 @@
 let markers = [];
+let infowindow;
 
 window.onload = () => {
+
+   // Displays info box above marker
+   infowindow = new google.maps.InfoWindow();
+
   const superFood = {
     lat: -23.5617326,
     lng: -46.6623271
@@ -12,12 +17,12 @@ window.onload = () => {
     mapTypeId: "roadmap"
   });
 
-  //gets restaurants info from API
+
+  //gets store info from API
   function getStores() {
     axios
       .get("/api")
       .then(response => {
-        console.log(response.data);
         placeStores(response.data);
       })
       .catch(error => {
@@ -32,13 +37,24 @@ window.onload = () => {
         lat: store.location.coordinates[1],
         lng: store.location.coordinates[0]
       };
+
       const pin = new google.maps.Marker({
         position: center,
         map: map,
-        title: store.name
+        title: store.storeName
       });
       markers.push(pin);
+      // Adds info box above marker
+      google.maps.event.addListener(pin, "click", function() {
+        var contentString = `<h6> ${store.storeName} </h6>
+                              <p> ${store.address} </p>`
+          infowindow.setContent(contentString);
+          infowindow.open(map, this);
+        });
     });
+    
+      
   }
+  
   getStores();
 };

@@ -15,14 +15,30 @@
 
     <style>
         #map {
-            height: 60vh;
-            width: 60vh;
+            height: 40vh;
         }
     </style>
 
-  <div id="map">
-
+<section class="row">
+  <div id="map" class="col-lg-4">
   </div>
+
+  <div class="col-lg-4">
+    <ul class="nav nav-pills nav-stacked scroll-store">
+        {{#each store}}
+          <li class="nav-item">
+            <h4>{{storeName}}</h4>
+            <p>{{address}}, {{number}}</p>
+            <p>{{neighborhood}}</p>
+            <p>{{city}}</p>
+            <hr class="my-4 event-break">
+            </p>        
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+</section>
+  
 <!--  Axios CDN  -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!--  Google Maps Key  -->

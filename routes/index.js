@@ -22,13 +22,21 @@ let transport = nodemailer.createTransport({
   }
 });
 
-/* GET home page */
+/* GET home page and send store info */
 router.get('/', (req, res) => {
-  res.render('index');
+  Stores.find()
+      .then(store => {
+        res.render('index', { store });
+        console.log(store)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  
 });
 
+// Get info from store db
 router.get('/api', (req, res, next) => {
-
   Stores.find().then(store => {
     res.send(store)
   }).catch(err => console.log(err));
