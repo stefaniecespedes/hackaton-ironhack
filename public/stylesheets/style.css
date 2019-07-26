@@ -40,6 +40,7 @@ body {
 
 .main-text{
   padding-top: 15vh;
+  color: white;
 }
 .main-text h1{
   font-size: 3em
@@ -79,6 +80,69 @@ body {
 }
 
 .scroll-store li {
+  width: 30vh; }
+
+.card-login {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  /* background-color: #4e9b46; */
+}
+
+.images img {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.login-page {
+  padding: 1px;
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  height: 100vw;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  padding: 50px;
+  /* align-content: center; */
+}
+
+.feedback h2 {
+  font-weight: bolder;
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.consumer-box {
+  font-size: 20px;
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.images p {
+  margin-right: 24px;
+}
+
+figure {
+  max-width: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */
   width: 30vh;
 }
 

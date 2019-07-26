@@ -1,12 +1,25 @@
-<div id="login-form">
-  <form action="/login" method="POST">
-    <label for="email">Email</label>
-    <input type="email" name="username">
-    <label for="password">Password</label>
-    <input type="text" name="password">
-    <a href="/login"><button type="submit"> Login</button></a>
-    {{#if message}}
-    <p id="error-msg">{{message}}</p>
-    {{/if}}
-  </form>
+<div class="login-page">
+<div>
+<div class="card card-login d-flex align-content-center form-margin">
+  <div class="form-background container">
+      <div class="card-body">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="username">Email:</label>
+            <input type="email" name="username" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+          {{#if message}}
+          <div class="error-message">{{ message }}</div>
+          {{/if}}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
