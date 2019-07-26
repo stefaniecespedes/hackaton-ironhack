@@ -1,52 +1,80 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap");
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
-
-body {
-  font-size: 100%;
-  color: black;
-  font-family: 'Montserrat', sans-serif; }
-
-.wrapper {
-  margin: 0 auto;
-  width: 90%; }
-
-header {
-  width: 100%;
-  max-width: 100%;
-  position: fixed;
-  z-index: 999;
-  background: rgba(50, 50, 50, 0.95);
-  box-shadow: 0 10px 20px rgba(50, 50, 50, 0.95); }
-
-nav {
-  margin-top: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: flex-end; }
+}
 
-nav a {
-  font: 1.2em/1em sans-serif;
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: black; }
+/* //navbar */
 
-nav a:hover {
-  text-decoration: none;
-  color: green; }
+.navbar{
+  background-color: #4E9B46;
+  border-bottom: 0px;
+}
+.link-custom{
+  color: #F4F4F4 !important;
+  font-size: 1.3em;
+}
+
+.link-custom:hover{
+  color: black !important;
+}
+
+.custom-item{
+  background-color: green;
+}
+
+.custom-toggler{
+  border: 0px;
+}
+
+/* //main section - header */
+.header-main{
+  background-image: url(/images/3avos-leaves.png), url(/images/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: 90vh 80vh, 100% 90%;
+  background-position: 900px absolute, top center;
+  height:95vh;
+}
+.back-img{
+z-index: 1;
+}
+.main-text{
+  padding-top: 15vh;
+}
+.main-text h1{
+  font-size: 3em
+}
+.main-text p{
+  font-size: 1.5em;
+}
+
+.btn-custom{
+  background-color: #F2C94E;
+  color: black;
+  border: 0px;
+  border-radius: 5px;
+  padding: 2%;
+  width: 30vh;
+}
+
+.btn-custom:hover{
+  background-color: #EAA03C;
+  color: black;
+  border: 0px;
+}
+
+//benefits
+.image-list{
+  width: 180px;
+}
+// scroll map
 .scroll-store {
-  height: 40vh;
+  height:40vh;
   overflow-y: scroll;
-  width: 30vh; }
+  width: 30vh;
+}
 
 .scroll-store li {
-  width: 30vh; }
-
-/*# sourceMappingURL=style.css.map */
+  width: 30vh;
+}
