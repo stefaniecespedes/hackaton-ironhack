@@ -88,7 +88,7 @@ router.post('/getCoupon', (req, res) => {
 
         </style>
         <div>
-        <img src="https://secure.meetupstatic.com/photos/event/d/9/3/e/600_473815614.jpeg" alt="Ironhack">
+        // <img src="https://secure.meetupstatic.com/photos/event/d/9/3/e/600_473815614.jpeg" alt="Ironhack">
         <h1>Your coupon is here!</h1>
         <h2>Hello, ${name}!</h2>
         <p>Take this QR code to the nearest store and get 20% OFF your first purchase!</p>
