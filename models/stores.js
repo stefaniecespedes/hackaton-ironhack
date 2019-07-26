@@ -12,6 +12,6 @@ const storesSchema = new Schema({
   cep: { type: String },
 });
 
-const Stores = mongoose.model("Stores", storesSchema);
+const Stores = mongoose.model('Stores', storesSchema);
 
 module.exports = Stores;

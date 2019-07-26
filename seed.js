@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Stores = require('./models/celebrity');
+const Stores = require('./models/stores');
 
-const dbtitle = 'mongoose-project';
+const dbtitle = 'hackaton-ironhack';
 mongoose.connect(`mongodb://localhost/${dbtitle}`);
 Stores.collection.drop();
 
@@ -14,7 +14,7 @@ const stores = [
     neighborhood: 'Jardim Paulista',
     location: {
       type: 'Point',
-      coordinates: [-46.6623271, -23.5617326],
+      coordinates: ['-46.6623271', '-23.5617326'],
     },
     city: 'São Paulo',
     state: 'SP',
@@ -27,7 +27,7 @@ const stores = [
     neighborhood: 'Bela Vista',
     location: {
       type: 'Point',
-      coordinates: [-46.6615105, -23.5585757],
+      coordinates: ['-46.6615105', '-23.5585757'],
     },
     city: 'São Paulo',
     state: 'SP',
@@ -40,7 +40,7 @@ const stores = [
     neighborhood: 'Cerqueira Cesar',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.6634952', '-23.558779'],
     },
     city: 'São Paulo',
     state: 'SP',
@@ -53,7 +53,7 @@ const stores = [
     neighborhood: 'Jardim Paulista',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.6547006', '-23.5643488'],
     },
     city: 'São Paulo',
     state: 'SP',
@@ -66,7 +66,7 @@ const stores = [
     neighborhood: 'Santa Paula',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.5581647', '-23.6163362'],
     },
     city: 'São Caetano do Sul',
     state: 'SP',
@@ -79,7 +79,7 @@ const stores = [
     neighborhood: 'Centro',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.6230304', '-23.6309083'],
     },
     city: 'São Bernardo do Campo',
     state: 'SP',
@@ -92,7 +92,7 @@ const stores = [
     neighborhood: 'Vila Campesina',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.7719213', '-23.5464799'],
     },
     city: 'Osasco',
     state: 'SP',
@@ -105,7 +105,7 @@ const stores = [
     neighborhood: 'Jardim Bom',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.7805996', '-23.5916636'],
     },
     city: 'Guarulhos',
     state: 'SP',
@@ -118,7 +118,7 @@ const stores = [
     neighborhood: 'Vila Buarque',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.6490426', '-23.5396795'],
     },
     city: 'São Paulo',
     state: 'SP',
@@ -131,20 +131,7 @@ const stores = [
     neighborhood: 'Vila Caldas',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
-    },
-    city: 'Carapicuiba',
-    state: 'SP',
-    cep: '06311-000',
-  },
-  {
-    storeName: 'SuperFood',
-    address: 'Av. Rui Barbosa',
-    number: '409',
-    neighborhood: 'Vila Caldas',
-    location: {
-      type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.644993', '-23.559155'],
     },
     city: 'Carapicuiba',
     state: 'SP',
@@ -153,17 +140,68 @@ const stores = [
   {
     storeName: 'SuperFood',
     address: 'Av. Antonio Piranga',
-    number: '409',
-    neighborhood: 'Vila Caldas',
+    number: '171',
+    neighborhood: 'Centro',
     location: {
       type: 'Point',
-      coordinates: [-46.6634952, -23.558779],
+      coordinates: ['-46.622707', '-23.686251'],
     },
-    city: 'Carapicuiba',
+    city: 'Diadema',
     state: 'SP',
-    cep: '06311-000',
+    cep: '09911-160',
   },
-
+  {
+    storeName: 'SuperFood',
+    address: 'Av. Vital Brasil',
+    number: '1133',
+    neighborhood: 'Butantã',
+    location: {
+      type: 'Point',
+      coordinates: ['-46.7151041', '-23.5694623'],
+    },
+    city: 'São Paulo',
+    state: 'SP',
+    cep: '05503-001',
+  },
+  {
+    storeName: 'SuperFood',
+    address: 'Av. Alcantara Machado',
+    number: '576',
+    neighborhood: 'Bras',
+    location: {
+      type: 'Point',
+      coordinates: ['-46.6193709', '-23.5530546'],
+    },
+    city: 'São Paulo',
+    state: 'SP',
+    cep: '03102-000',
+  },
+  {
+    storeName: 'SuperFood',
+    address: 'Av. Imirim',
+    number: '1217',
+    neighborhood: 'Imirim',
+    location: {
+      type: 'Point',
+      coordinates: ['-46.6462815', '-23.4944008'],
+    },
+    city: 'São Paulo',
+    state: 'SP',
+    cep: '02465-100',
+  },
+  {
+    storeName: 'SuperFood',
+    address: 'Av. Roque Petroni Junior',
+    number: '1089',
+    neighborhood: 'Jardim das Acacias',
+    location: {
+      type: 'Point',
+      coordinates: ['-46.6980466', '-23.6215123'],
+    },
+    city: 'São Paulo',
+    state: 'SP',
+    cep: '04707-000',
+  },
 ];
 
 
