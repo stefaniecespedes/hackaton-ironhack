@@ -26,7 +26,7 @@ let transport = nodemailer.createTransport({
 router.get('/', (req, res) => {
   Stores.find()
       .then(store => {
-        res.render('index', { store });
+        res.render('index', { store, GMAPS: process.env.GMAPS });
         console.log(store)
       })
       .catch(error => {
