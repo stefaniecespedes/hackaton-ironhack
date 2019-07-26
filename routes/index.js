@@ -25,20 +25,20 @@ let transport = nodemailer.createTransport({
 /* GET home page and send store info */
 router.get('/', (req, res) => {
   Stores.find()
-      .then(store => {
-        res.render('index', { store, GMAPS: process.env.GMAPS });
-        console.log(store)
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    .then((store) => {
+      res.render('index', { store, GMAPS: process.env.GMAPS });
+      console.log(store);
+    })
+    .catch((err) => {
+      throw new Error(err)
+    });
   
 });
 
 // Get info from store db
 router.get('/api', (req, res, next) => {
   Stores.find().then(store => {
-    res.send(store)
+    res.send(store);
   }).catch(err => console.log(err));
 });
 
@@ -107,13 +107,13 @@ router.post('/getCoupon', (req, res) => {
         </html>`
         })
           .then(info => console.log(info))
-          .catch(error => console.log(error))
+          .catch(error => console.log(error));
         res.redirect('/');
       })
       .catch((err) => {
         res.render('index', { message: 'Something went wrong' });
-      })
-  })
-})
+      });
+  });
+});
 
 module.exports = router;

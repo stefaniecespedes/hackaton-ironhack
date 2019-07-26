@@ -12,6 +12,8 @@ const storesSchema = new Schema({
   cep: { type: String },
 });
 
+storesSchema.index({ location: '2dsphere' });
+
 const Stores = mongoose.model('Stores', storesSchema);
 
 module.exports = Stores;
