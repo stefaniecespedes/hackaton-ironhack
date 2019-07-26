@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Stores = require('./models/stores');
 
-const dbtitle = 'hackaton-ironhack';
+const dbtitle = 'project-hackaton';
 mongoose.connect(`mongodb://localhost/${dbtitle}`);
 Stores.collection.drop();
 
