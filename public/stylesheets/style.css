@@ -9,7 +9,7 @@ body {
 /* //navbar */
 
 .navbar{
-  background-color: #4E9B46;
+  background-color: #3e7134 !important;
   border-bottom: 0px;
 }
 .link-custom{
@@ -82,11 +82,9 @@ body {
   width: 30vh;
 }
 
-.margin-custom{
-  margin-right: 100px;
+.map-sec{
+  background-color: rgba(228, 227, 227, 0.795);
 }
-
-
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   .header-main{
     background-image: url(/images/Background.jpg);
