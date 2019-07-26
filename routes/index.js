@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 //   host: "smtp.sparkpostmail.com",
 //   port: 587,
 //   auth: {
-//     user: "",
+//     user: "SMTP_Injection",
 //     pass: "452d52801b88584c40c03c698255951ff9e061c0"
 //   }
 // });
@@ -22,13 +22,13 @@ let transport = nodemailer.createTransport({
   }
 });
 
-/* GET home page */
+/* GET home page and send store info */
 router.get('/', (req, res) => {
   res.render('index', { GMAPS: process.env.GMAPS });
 });
 
+// Get info from store db
 router.get('/api', (req, res, next) => {
-
   Stores.find().then(store => {
     res.send(store)
   }).catch(err => console.log(err));
@@ -62,6 +62,7 @@ router.post('/getCoupon', (req, res) => {
     newUser.save()
       .then(() => {
         transport.sendMail({
+          // nomedoprojeto@ironhackers.dev
           from: '"Your coupon is here!" <37a6f5540d-35e0ea@inbox.mailtrap.io>',
           to: email, 
           subject: 'Get your coupon', 
@@ -89,10 +90,11 @@ router.post('/getCoupon', (req, res) => {
         </style>
         <div>
         <img src="https://secure.meetupstatic.com/photos/event/d/9/3/e/600_473815614.jpeg" alt="Ironhack">
-        <h1Your coupon is here!</h1>
+        <h1>Your coupon is here!</h1>
         <h2>Hello, ${name}!</h2>
-        <p>Redeem your coupon now by clicking <a href="http://localhost:3000/auth/confirm/${confirmationCode}">here</a></p>
-        <p>Thank you for your support! 😻</p>
+        <p>Take this QR code to the nearest store and get 20% OFF your first purchase!</p>
+        <img src="${'https://res.cloudinary.com/stefdev/image/upload/v1564149103/frame_l8cq5m.png'}">
+        <p>Can't wait to meet you there! 😻</p>
         </div>
         </html>`
         })
