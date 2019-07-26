@@ -41,5 +41,12 @@ nav a {
 nav a:hover {
   text-decoration: none;
   color: green; }
+.scroll-store {
+  height: 40vh;
+  overflow-y: scroll;
+  width: 30vh; }
+
+.scroll-store li {
+  width: 30vh; }
 
 /*# sourceMappingURL=style.css.map */
