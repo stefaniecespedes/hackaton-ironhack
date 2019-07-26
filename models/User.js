@@ -8,10 +8,6 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  confirmationCode: {
-    type: String,
-    unique: true,
-  },
   status: {
     type: String,
     enum: ['Pending Confirmation', 'Active'],
